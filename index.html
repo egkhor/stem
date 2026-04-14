@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+this is my full code u check.. <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,31 +8,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fredoka+One&display=swap" rel="stylesheet">
 <style>
 :root {
-  --space:   #03071E;
-  --deep:    #070D2A;
-  --navy:    #0A1540;
-  --blue:    #0B2FA8;
-  --sky:     #1569E0;
-  --cyan:    #00C2FF;
-  --teal:    #00E5C8;
-  --yellow:  #FFD60A;
-  --orange:  #FF8C00;
-  --coral:   #FF4B4B;
-  --purple:  #7B2FFF;
-  --violet:  #A855F7;
-  --white:   #FFFFFF;
-  --silver:  #B0C4D8;
-  --card:    rgba(255,255,255,0.04);
-  --border:  rgba(0,194,255,0.15);
+  --space: #03071E;
+  --deep: #070D2A;
+  --navy: #0A1540;
+  --blue: #0B2FA8;
+  --sky: #1569E0;
+  --cyan: #00C2FF;
+  --teal: #00E5C8;
+  --yellow: #FFD60A;
+  --orange: #FF8C00;
+  --coral: #FF4B4B;
+  --purple: #7B2FFF;
+  --violet: #A855F7;
+  --white: #FFFFFF;
+  --silver: #B0C4D8;
+  --card: rgba(255,255,255,0.04);
+  --border: rgba(0,194,255,0.15);
   --r: 16px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--space);color:var(--silver);overflow-x:hidden;}
-
 /* STARS */
 #stars-bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
-
 /* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:999;
@@ -47,7 +45,6 @@ nav{
 .nav-links a{color:var(--silver);text-decoration:none;font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:8px;transition:all .2s;}
 .nav-links a:hover{background:rgba(0,194,255,.1);color:var(--cyan);}
 .nav-cta{background:linear-gradient(135deg,var(--sky),var(--blue)) !important;color:white !important;font-weight:700 !important;}
-
 /* HERO */
 #hero{
   min-height:100vh;
@@ -70,7 +67,6 @@ nav{
 .orb2{width:400px;height:400px;background:rgba(0,229,200,.12);bottom:-60px;right:-60px;animation:pulse 11s ease-in-out infinite alternate-reverse;}
 .orb3{width:300px;height:300px;background:rgba(123,47,255,.15);top:40%;right:10%;animation:pulse 7s ease-in-out infinite alternate;}
 @keyframes pulse{0%{transform:scale(1)}100%{transform:scale(1.18)}}
-
 .hero-inner{position:relative;z-index:2;max-width:900px;margin:0 auto;}
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:8px;
@@ -82,7 +78,6 @@ nav{
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.1}}
 @keyframes fadeup{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 @keyframes mushiFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-14px) rotate(2deg)}}
-
 .hero-title{
   font-family:'Orbitron',monospace;font-weight:900;
   font-size:clamp(1.8rem,5.5vw,4.2rem);
@@ -97,7 +92,6 @@ nav{
   animation:fadeup .7s .1s ease both;
 }
 .hero-desc{font-size:.97rem;color:var(--silver);max-width:640px;margin:0 auto 28px;line-height:1.8;animation:fadeup .7s .2s ease both;}
-
 /* ── APPS SECTION ── */
 #apps{background:linear-gradient(180deg,#0D3B2E 0%,#0E2E22 100%);position:relative;overflow:hidden;}
 #apps .batik-bg{opacity:.07;}
@@ -105,13 +99,10 @@ nav{
 #apps .sec-desc{color:#A8D5C2;}
 #apps .sec-label{color:var(--amber);}
 #apps .sec-label::before{background:var(--amber);}
-
 .apps-filter{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:28px 0;}
 .afilter{padding:7px 18px;border-radius:50px;background:rgba(255,255,255,.07);color:#A8D5C2;font-weight:700;font-size:.82rem;cursor:pointer;border:1.5px solid rgba(255,255,255,.1);transition:all .2s;}
 .afilter.active,.afilter:hover{background:var(--gold);color:var(--forest);border-color:var(--gold);}
-
 .apps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
-
 .app-card{
   background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
   border-radius:var(--r);padding:22px 18px;
@@ -121,41 +112,34 @@ nav{
   background:radial-gradient(ellipse at top left, rgba(45,184,154,.14) 0%, transparent 70%);}
 .app-card:hover{transform:translateY(-8px);border-color:rgba(45,184,154,.4);box-shadow:0 20px 56px rgba(0,0,0,.5);}
 .app-card:hover::before{opacity:1;}
-
 .app-card-icon{
   width:60px;height:60px;border-radius:16px;object-fit:cover;
   box-shadow:0 6px 20px rgba(0,0,0,.4);margin-bottom:14px;
   transition:transform .3s;
 }
 .app-card:hover .app-card-icon{transform:scale(1.08) rotate(-3deg);}
-
 .app-route-badge{
   display:inline-block;font-size:.65rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase;
   padding:2px 10px;border-radius:50px;margin-bottom:8px;
 }
-
 .app-card::before{
   content:'';position:absolute;inset:0;opacity:0;transition:opacity .32s;
   background:radial-gradient(ellipse at top left, rgba(14,110,106,.12) 0%, transparent 70%);
 }
 .app-card:hover{border-color:rgba(14,110,106,.4);transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.4);}
 .app-card:hover::before{opacity:1;}
-
 .app-card-top{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;}
 .app-icon{
   width:56px;height:56px;border-radius:14px;flex-shrink:0;
   object-fit:cover;box-shadow:0 6px 20px rgba(0,0,0,.4);
 }
-
   .app-ios-btn {
   position: relative;
   z-index: 5;
 }
-
 .app-card::before {
   z-index: 0;
 }
-
 .app-card * {
   position: relative;
   z-index: 1;
@@ -167,10 +151,8 @@ nav{
 .rb-art{background:rgba(140,60,200,.2);color:#D0A0FF;border:1px solid rgba(140,60,200,.4);}
 .rb-lrt{background:rgba(220,160,30,.2);color:#FFD070;border:1px solid rgba(220,160,30,.4);}
 .rb-sara{background:rgba(40,180,100,.2);color:#80EAA0;border:1px solid rgba(40,180,100,.4);}
-
 .app-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:white;margin-bottom:6px;line-height:1.2;}
 .app-desc{font-size:.76rem;color:#7A9E8E;line-height:1.6;margin-bottom:14px;}
-
 .app-dl-row{display:flex;gap:6px;flex-wrap:wrap;}
 .dl-pill{
   display:inline-flex;align-items:center;gap:5px;
@@ -179,11 +161,10 @@ nav{
   padding:5px 11px;border-radius:8px;text-decoration:none;transition:all .2s;
 }
 .dl-pill:hover{background:var(--teal);color:white;border-color:var(--teal);}
-  
+ 
 /* Mushi hero */
 .hero-mascots{display:flex;justify-content:center;align-items:flex-end;gap:20px;margin-bottom:24px;animation:fadeup .7s .15s ease both;}
 .mushi-hero{width:clamp(90px,12vw,130px);filter:drop-shadow(0 12px 28px rgba(0,194,255,.35));animation:mushiFloat 4s ease-in-out infinite;}
-
 .hero-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;animation:fadeup .7s .3s ease both;}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:50px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;font-weight:800;text-decoration:none;cursor:pointer;border:none;transition:all .22s;}
 .btn-cyan{background:linear-gradient(135deg,var(--cyan),var(--teal));color:#03071E;box-shadow:0 6px 24px rgba(0,194,255,.4);}
@@ -192,10 +173,8 @@ nav{
 .btn-yellow:hover{transform:translateY(-2px);}
 .btn-ghost{background:rgba(255,255,255,.07);color:var(--white);border:1.5px solid rgba(255,255,255,.2);}
 .btn-ghost:hover{background:rgba(255,255,255,.14);transform:translateY(-2px);}
-
 .hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:24px;animation:fadeup .7s .4s ease both;}
 .htag{background:rgba(255,255,255,.05);border:1px solid rgba(0,194,255,.2);color:#7BC8E8;font-size:.72rem;font-weight:700;padding:3px 12px;border-radius:50px;}
-
 /* STATS STRIP */
 .stats-strip{
   position:relative;z-index:2;
@@ -207,7 +186,6 @@ nav{
 .sstat:last-child{border-right:none;}
 .sstat-n{font-family:'Orbitron',monospace;font-size:1.5rem;font-weight:900;color:var(--cyan);display:block;}
 .sstat-l{font-size:.72rem;color:var(--silver);font-weight:600;text-transform:uppercase;letter-spacing:.8px;}
-
 /* SECTIONS */
 section{position:relative;z-index:1;padding:80px 24px;}
 .container{max-width:1180px;margin:0 auto;}
@@ -218,7 +196,6 @@ section{position:relative;z-index:1;padding:80px 24px;}
 .sec-title .yellow{color:var(--yellow);}
 .sec-desc{font-size:.95rem;color:var(--silver);line-height:1.8;max-width:640px;}
 .text-center{text-align:center;margin:0 auto;}
-
 /* BOOKS SECTION */
 #books{background:linear-gradient(180deg,var(--space),var(--deep));}
 .books-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px;}
@@ -229,7 +206,6 @@ section{position:relative;z-index:1;padding:80px 24px;}
 .book-card:hover{border-color:rgba(0,194,255,.5);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,194,255,.15);}
 .book-card::before{content:'';position:absolute;inset:0;opacity:0;transition:opacity .32s;background:radial-gradient(ellipse at top,rgba(0,194,255,.08) 0%,transparent 70%);}
 .book-card:hover::before{opacity:1;}
-
 .book-covers{display:flex;gap:10px;padding:20px 20px 0;justify-content:center;}
 .book-cover{height:clamp(160px,22vw,220px);border-radius:12px;box-shadow:0 10px 32px rgba(0,0,0,.5);transition:transform .3s;object-fit:cover;}
 .book-card:hover .book-cover:first-child{transform:rotate(-3deg) scale(1.04);}
@@ -253,7 +229,6 @@ pointer-events:none; /* 🔥 allow clicks to pass through */
 .bb-preview:hover{background:rgba(0,194,255,.22);}
 .bb-store{background:rgba(255,255,255,.08);color:var(--silver);border:1px solid rgba(255,255,255,.15);}
 .bb-store:hover{background:rgba(255,255,255,.14);}
-
 /* ENDORSEMENT */
 #endorse{background:var(--deep);}
 .endorse-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:48px;}
@@ -265,14 +240,12 @@ pointer-events:none; /* 🔥 allow clicks to pass through */
 .endorse-text p{font-size:.9rem;color:var(--silver);line-height:1.8;margin-bottom:14px;}
 .endorse-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
 .ep{background:rgba(0,194,255,.08);border:1px solid var(--border);color:#7BC8E8;font-size:.76rem;font-weight:700;padding:4px 12px;border-radius:50px;}
-
 .endorse-visual{text-align:center;position:relative;}
 .ev-mushi{width:clamp(140px,20vw,200px);filter:drop-shadow(0 16px 36px rgba(0,194,255,.3));animation:mushiFloat 5s ease-in-out infinite;margin:0 auto 16px;display:block;}
 .ev-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .ev-stat{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:12px;padding:16px 14px;text-align:center;}
 .ev-stat-n{font-family:'Orbitron',monospace;font-size:1.4rem;font-weight:900;color:var(--yellow);display:block;}
 .ev-stat-l{font-size:.72rem;color:var(--silver);font-weight:600;}
-
 /* CURRICULUM */
 #curriculum{background:linear-gradient(180deg,var(--deep),#060B20);}
 .year-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:40px;}
@@ -289,13 +262,11 @@ pointer-events:none; /* 🔥 allow clicks to pass through */
 .yc-purple{color:#C084FC;border:1px solid rgba(192,132,252,.3);background:rgba(192,132,252,.1);}
 .yc-gold{color:#FBBF24;border:1px solid rgba(251,191,36,.3);background:rgba(251,191,36,.1);}
 .yc-grey{color:#94A3B8;border:1px solid rgba(148,163,184,.3);background:rgba(148,163,184,.1);}
-
 .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px;}
 .feat{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:14px;padding:20px 18px;}
 .feat-icon{font-size:1.6rem;margin-bottom:10px;}
 .feat-title{font-weight:800;font-size:.9rem;color:var(--white);margin-bottom:5px;}
 .feat-body{font-size:.78rem;color:var(--silver);line-height:1.6;}
-
 /* MASTERAPP TABS */
 #masterapp{background:#060B20;}
 .tabs-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:28px 0 12px;}
@@ -309,14 +280,12 @@ pointer-events:none; /* 🔥 allow clicks to pass through */
 .tp-icon{font-size:1.4rem;margin-bottom:6px;}
 .tp-title{font-weight:800;font-size:.85rem;color:var(--white);margin-bottom:3px;}
 .tp-body{font-size:.76rem;color:var(--silver);line-height:1.5;}
-
 /* APPS ECOSYSTEM */
 #ecosystem{background:linear-gradient(180deg,#060B20,var(--space));}
 .eco-intro{max-width:700px;margin:0 auto 36px;text-align:center;}
 .apps-filter-row{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:24px;}
 .acat{padding:6px 15px;border-radius:50px;background:rgba(255,255,255,.06);color:var(--silver);font-weight:700;font-size:.76rem;cursor:pointer;border:1px solid rgba(255,255,255,.1);transition:all .2s;}
 .acat.active,.acat:hover{background:var(--yellow);color:#1a0a00;border-color:var(--yellow);}
-
 .eco-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;}
 .eco-card{
   background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r);
@@ -331,7 +300,6 @@ pointer-events:none; /* 🔥 allow clicks to pass through */
 .eco-dl{font-size:.64rem;font-weight:700;padding:3px 9px;border-radius:6px;text-decoration:none;border:1px solid rgba(255,255,255,.15);color:var(--silver);transition:all .2s;background:rgba(255,255,255,.06);}
 .eco-dl:hover{background:var(--cyan);color:#03071E;border-color:var(--cyan);}
 .eco-free-badge{position:absolute;top:-6px;right:-6px;background:linear-gradient(135deg,var(--teal),#00A89A);color:#001a17;font-size:.6rem;font-weight:900;padding:2px 7px;border-radius:50px;}
-
 /* MUSHI SECTION */
 #mushi-says{background:linear-gradient(135deg,#070D2A,#0A1540);text-align:center;padding:64px 24px;}
 .ms-inner{max-width:700px;margin:0 auto;}
@@ -339,7 +307,6 @@ pointer-events:none; /* 🔥 allow clicks to pass through */
 .ms-quote{font-family:'Fredoka One',cursive;font-size:clamp(1.1rem,2.8vw,1.5rem);color:var(--white);line-height:1.65;margin-bottom:14px;}
 .ms-quote .cyan{color:var(--cyan);}
 .ms-quote .yellow{color:var(--yellow);}
-
 /* FOUNDER */
 #founder{background:var(--space);}
 .founder-grid{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start;margin-top:48px;}
@@ -352,7 +319,6 @@ pointer-events:none; /* 🔥 allow clicks to pass through */
 .fc-logo{height:34px;margin:12px auto 0;display:block;border-radius:6px;}
 .fc-contacts{display:flex;flex-direction:column;gap:7px;margin-top:16px;}
 .fci{display:flex;align-items:center;gap:8px;font-size:.76rem;color:var(--silver);}
-
 .founder-text .fq{
   border-left:3px solid var(--yellow);padding:16px 20px;
   background:rgba(255,214,10,.05);border-radius:0 10px 10px 0;
@@ -361,7 +327,6 @@ pointer-events:none; /* 🔥 allow clicks to pass through */
 .founder-text p{font-size:.88rem;color:var(--silver);line-height:1.8;margin-bottom:12px;}
 .portfolio-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
 .pp{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--silver);font-size:.73rem;font-weight:700;padding:3px 11px;border-radius:50px;}
-
 /* FOOTER */
 footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 22px;color:#2A4A5E;}
 .footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid var(--border);}
@@ -372,7 +337,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
 .footer-links a{color:#2A4A5E;text-decoration:none;font-size:.78rem;transition:color .2s;}
 .footer-links a:hover{color:var(--cyan);}
 .footer-bottom{max-width:1180px;margin:16px auto 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.73rem;color:#1A3A4E;}
-
 /* MUSHI CORNER */
 .mushi-corner-wrap{position:fixed;bottom:22px;right:22px;z-index:999;cursor:pointer;}
 .mushi-corner-img{width:64px;filter:drop-shadow(0 6px 16px rgba(0,194,255,.4));animation:mushiFloat 3.5s ease-in-out infinite;transition:transform .2s;}
@@ -386,41 +350,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
 }
 .mushi-tip-box.show{display:block;animation:fadeup .3s ease both;}
 .mushi-tip-box::after{content:'';position:absolute;bottom:-12px;right:20px;border:6px solid transparent;border-top-color:var(--deep);}
-
-/* KPM Quote Protection - ONLY on the text */
-.no-copy,
-.no-copy * {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-}
-.no-copy {
-  position: relative;
-  cursor: default;
-}
-
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(22px);transition:all .65s ease;}
-.reveal.visible{opacity:1;transform:translateY(0);}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .books-grid,.endorse-grid,.founder-grid,.footer-inner{grid-template-columns:1fr;}
-  .features-grid{grid-template-columns:1fr 1fr;}
-  nav{padding:10px 16px;}
-  .nav-links{display:none;}
-}
-@media(max-width:540px){
-  .features-grid,.tips-grid{grid-template-columns:1fr;}
-  .eco-grid{grid-template-columns:repeat(3,1fr);}
-}
-</style>
-</head>
-<body>
-<!-- Stars canvas -->
-<canvas id="stars-bg"></canvas>
 
 <!-- NAV -->
 <nav>
@@ -438,7 +367,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
     <li><a href="https://apps.apple.com/my/app/egk-stem-masterapp/id6755504691" target="_blank" class="nav-cta">🚀 Download App</a></li>
   </ul>
 </nav>
-
 <!-- ══ HERO ══ -->
 <section id="hero">
   <div class="hero-grid"></div>
@@ -456,7 +384,7 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
     </h1>
     <p class="hero-sub">Pendidikan STEM AR · 59 Augmented Reality Modules</p>
     <p class="hero-desc">
-      Malaysia's most comprehensive AR-powered STEM education system — 59 modules covering Year 3 to Form 5, 
+      Malaysia's most comprehensive AR-powered STEM education system — 59 modules covering Year 3 to Form 5,
       100% aligned with KPM DSKP curriculum, developed in consultation with the Penang Deputy Director of Education.
     </p>
     <div class="hero-btns">
@@ -474,7 +402,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
     </div>
   </div>
 </section>
-
 <!-- STATS STRIP -->
 <div class="stats-strip" style="position:relative;z-index:2;">
   <div class="stats-inner">
@@ -486,7 +413,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
     <div class="sstat"><span class="sstat-n">FREE</span><span class="sstat-l">MasterApp Download</span></div>
   </div>
 </div>
-
 <!-- ══ BOOKS ══ -->
 <section id="books">
   <div class="container">
@@ -496,7 +422,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
       <p class="sec-desc" style="margin:0 auto;">Each book is a portal to 59 STEM worlds — scan any QR code with the free EGK STEM MasterApp to launch a 3D AR experience right from the page.</p>
     </div>
     <div class="books-grid" style="margin-top:44px;">
-
       <!-- Malay edition -->
       <div class="book-card reveal">
         <div class="book-covers">
@@ -516,7 +441,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
           </div>
         </div>
       </div>
-
       <!-- English edition -->
       <div class="book-card reveal">
         <div class="book-covers">
@@ -537,7 +461,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
         </div>
       </div>
     </div>
-
     <!-- What's inside -->
     <div style="margin-top:36px;background:rgba(0,194,255,.05);border:1px solid var(--border);border-radius:16px;padding:24px 28px;" class="reveal">
       <div style="font-family:'Orbitron',monospace;font-size:.88rem;font-weight:800;color:var(--cyan);margin-bottom:14px;">📦 What's Inside Each Book</div>
@@ -554,35 +477,32 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
     </div>
   </div>
 </section>
-
 <!-- ══ KPM QUOTE ══ -->
-<section id="prof" style="padding:70px 20px; background:var(--deep);">
+<section id="prof" style="padding:70px 20px;">
   <div class="container">
     <div class="prof-inner reveal">
       <span class="section-label blue" style="margin-bottom:20px;display:inline-block;">Endorsed by KPM</span>
-      
-      <!-- Protected Quote -->
-      <div class="prof-quote no-copy" style="background:rgba(0,194,255,.06);border-left:4px solid var(--cyan);padding:24px;border-radius:12px;font-size:1.02rem;line-height:1.75;color:#CBD5E1;">
+     
+      <!-- Protected Quote - only this part is non-copyable -->
+      <div class="prof-quote no-copy">
         Kementerian Pendidikan Malaysia, melalui Jawatankuasa Penilai, mencadangkan supaya produk AR sesuai untuk subjek STEM di Sekolah. Namun begitu, kandungan produk EGK perlu selaras dengan kurikulum semasa dan sesuai mengikut keperluan murid.
-        <div class="prof-name" style="margin-top:18px;font-weight:700;color:var(--cyan);">Kementerian Pendidikan Malaysia</div>
+        <div class="prof-name">Kementerian Pendidikan Malaysia</div>
       </div>
-
-      <!-- PDF -->
+      <!-- PDF remains fully interactive and visible -->
       <div style="margin-top:40px; position: relative;">
         <iframe
           id="kpm-pdf"
           src="https://egkhor.com.my/home/wp-content/uploads/2026/04/EGK-MICROELECTRONIC-SOLUTION-GROUP-SDN-BHD-2.pdf"
           width="100%"
-          height="650px"
-          style="border:1px solid #ddd;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.3);"
+          height="600px"
+          style="border:1px solid #ddd;border-radius:10px;"
           sandbox="allow-scripts allow-same-origin">
         </iframe>
       </div>
     </div>
   </div>
 </section>
-
-  
+ 
 <!-- ══ ENDORSEMENT ══ -->
 <section id="endorse">
   <div class="container">
@@ -616,7 +536,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
     </div>
   </div>
 </section>
-
 <!-- ══ CURRICULUM ══ -->
 <section id="curriculum">
   <div class="container">
@@ -634,7 +553,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
       <div class="year-card reveal"><div class="yc-icon">🏆</div><div class="yc-year">FORM 4–5</div><span class="yc-count yc-gold">9 Modules</span><div class="yc-body">SPM-level Physics, Chemistry, Biology — Nuclear, Organic Chemistry &amp; more</div></div>
       <div class="year-card reveal"><div class="yc-icon">👨‍👩‍👧</div><div class="yc-year">NON-AR</div><span class="yc-count yc-grey">5 Modules</span><div class="yc-body">Parent App, Teacher Resources, Assessment Tools &amp; Digital Literacy modules</div></div>
     </div>
-
     <div class="features-grid" style="margin-top:40px;">
       <div class="feat reveal"><div class="feat-icon">🥽</div><div class="feat-title">Augmented Reality Lab</div><div class="feat-body">55 full AR modules — point your phone at any QR code in the book and watch the topic materialize in 3D in your classroom or living room.</div></div>
       <div class="feat reveal"><div class="feat-icon">🤖</div><div class="feat-title">Emcee Teacher AI Bot</div><div class="feat-body">An AI-powered teaching assistant inside the MasterApp that guides students through each module, answers questions, and runs in-app assessments.</div></div>
@@ -645,7 +563,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
     </div>
   </div>
 </section>
-
 <!-- ══ MASTERAPP TABS ══ -->
 <section id="masterapp">
   <div class="container">
@@ -665,7 +582,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
       <div class="tab-btn" onclick="showTab('parents',this)">👨‍👩‍👧 For Parents</div>
       <div class="tab-btn" onclick="showTab('info',this)">ℹ️ Official Info</div>
     </div>
-
     <div id="tab-modules" class="tab-panel active">
       <div class="tp-grid">
         <div class="tp-card"><div class="tp-icon">📋</div><div class="tp-title">Full Module Directory</div><div class="tp-body">Browse all 59 modules sorted by year/form level with direct QR code launch.</div></div>
@@ -708,13 +624,12 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
     </div>
   </div>
 </section>
-
 <!-- ══ MUSHI SAYS ══ -->
 <section id="mushi-says">
   <div class="ms-inner reveal">
     <img class="ms-mushi" src="https://egkhor.com.my/home/wp-content/uploads/2026/04/MUSHI.png" alt="Mushi">
     <p class="ms-quote">
-      "Before this, my child thought science was boring. Now every night he insists I open 
+      "Before this, my child thought science was boring. Now every night he insists I open
       <span class="cyan">SolarSystem AR</span>, and then asks questions until my head spins!<br>
       Thank you, <span class="yellow">EGK</span>!" 🌟
     </p>
@@ -725,7 +640,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
     </div>
   </div>
 </section>
-
 <!-- ══ APPS ECOSYSTEM ══ -->
 <section id="ecosystem">
   <div class="container">
@@ -734,7 +648,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
       <h2 class="sec-title">40+ <span class="yellow">AR Learning Apps</span></h2>
       <p class="sec-desc">Beyond STEM — EGK has built a universe of AR educational apps covering science, history, engineering, energy, biology, AI, coding, culture, and more.</p>
     </div>
-
     <div class="apps-filter-row">
       <div class="acat active" onclick="filterEco('all',this)">🌌 All Apps</div>
       <div class="acat" onclick="filterEco('Education',this)">🎓 Education</div>
@@ -747,11 +660,9 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
       <div class="acat" onclick="filterEco('History',this)">📜 History</div>
       <div class="acat" onclick="filterEco('Safety',this)">🛡️ Safety</div>
     </div>
-
     <div class="eco-grid" id="ecoGrid">
       <!-- Generated by JS below -->
     </div>
-
     <div style="margin-top:24px;text-align:center;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;" class="reveal">
       <img src="https://egkhor.com.my/home/wp-content/uploads/2026/04/MUSHI.png" style="width:56px;animation:mushiFloat 4s ease-in-out infinite;filter:drop-shadow(0 5px 12px rgba(0,194,255,.3));" alt="Mushi">
       <p style="font-size:.88rem;color:var(--silver);max-width:460px;line-height:1.7;font-style:italic;">
@@ -760,7 +671,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
     </div>
   </div>
 </section>
-
 <!-- ══ FOUNDER ══ -->
 <section id="founder">
   <div class="container">
@@ -785,12 +695,12 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
           "We started with a single dream: to let every Malaysian student be able to 'hold' the planet, 'enter' the human heart, and 'bring to life' an electric circuit — all within a regular classroom. Today, after research and development, that dream has become a reality through 59 AR modules and the EGK STEM MasterApp."
         </blockquote>
         <p>
-          Isaac Khor Eng Gian is the founder of EGK Microelectronic Solutions Group Sdn. Bhd., based in Penang, Malaysia. 
-          The EGK STEM AR series was developed in direct consultation with the <strong style="color:var(--white)">Penang Deputy Director of Education</strong> 
+          Isaac Khor Eng Gian is the founder of EGK Microelectronic Solutions Group Sdn. Bhd., based in Penang, Malaysia.
+          The EGK STEM AR series was developed in direct consultation with the <strong style="color:var(--white)">Penang Deputy Director of Education</strong>
           and is acknowledged by the Ministry of Education Malaysia's Private Teaching &amp; Learning Materials Evaluation Committee.
         </p>
         <p>
-          Beyond STEM, EGK has built a full ecosystem of educational technology including the AI Adventure series, 
+          Beyond STEM, EGK has built a full ecosystem of educational technology including the AI Adventure series,
           Anti-Bully Careline, Humanitarian Resilience Initiative, and Malaysia's most comprehensive transport apps suite.
         </p>
         <div class="portfolio-row">
@@ -805,7 +715,6 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -849,13 +758,11 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
     <span style="color:var(--cyan);">🥽 Science Comes Alive · EGK STEM AR</span>
   </div>
 </footer>
-
 <!-- Fixed Mushi -->
 <div class="mushi-corner-wrap" id="mushiCorner">
   <img class="mushi-corner-img" src="https://egkhor.com.my/home/wp-content/uploads/2026/04/MUSHI.png" alt="Mushi">
 </div>
 <div class="mushi-tip-box" id="mushiTip"></div>
-
 <script>
 // ── STARS ──
 (function(){
@@ -871,13 +778,11 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
     ctx.fill();
   }
 })();
-
 // ── SCROLL REVEAL ──
 const obs=new IntersectionObserver(e=>{
   e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}});
 },{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
 // ── MASTERAPP TABS ──
 function showTab(id,el){
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
@@ -885,33 +790,6 @@ function showTab(id,el){
   el.classList.add('active');
   document.getElementById('tab-'+id).classList.add('active');
 }
-
-  <script>
-// Your existing scripts (stars, reveal, tabs, apps, mushi) ...
-
-// KPM Quote Protection Script
-document.addEventListener('DOMContentLoaded', function() {
-  const quote = document.querySelector('.no-copy');
-  
-  if (quote) {
-    quote.addEventListener('copy', e => e.preventDefault());
-    quote.addEventListener('cut', e => e.preventDefault());
-    quote.addEventListener('contextmenu', e => e.preventDefault());
-    quote.onselectstart = () => false;
-  }
-
-  // Optional console message
-  document.addEventListener('copy', function(e) {
-    const selected = (document.getSelection ? document.getSelection().toString() : '').trim();
-    if (selected.length > 10) {
-      console.log("%cKPM Quote copy attempt blocked", "color:#00C2FF;font-weight:bold");
-    }
-  });
-});
-</script>
-</body>
-</html>
-
 // ── APPS DATA ──
 const apps=[
     // IsaacLab Industry 4.0
@@ -962,7 +840,6 @@ const apps=[
   {name:"EGK AI AR",cat:"AI",icon:"https://egkhor.com.my/home/wp-content/uploads/2025/12/EGKAI.jpg",free:false,android:"https://buy.stripe.com/8x26oGgQ97hb3Iz5QV6Zy0c",ios:"https://apps.apple.com/my/app/egk-ai-ar/id6755432636"},
   {name:"EGK HSR AR",cat:"Infrastructure",icon:"https://egkhor.com.my/home/wp-content/uploads/2025/12/EGKHSR.jpg",free:false,android:"https://buy.stripe.com/8x26oGgQ97hb3Iz5QV6Zy0c",ios:"https://apps.apple.com/my/app/egk-hsr-ar/id6751638714"},
 ];
-
 function renderApps(filter){
   const g=document.getElementById('ecoGrid');
   g.innerHTML='';
@@ -979,13 +856,11 @@ function renderApps(filter){
   });
 }
 renderApps('all');
-
 function filterEco(cat,el){
   document.querySelectorAll('.acat').forEach(c=>c.classList.remove('active'));
   el.classList.add('active');
   renderApps(cat);
 }
-
 // ── MUSHI TIPS ──
 const tips=[
   "🥽 Point camera at QR → 3D magic!",
