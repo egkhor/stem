@@ -868,6 +868,14 @@ function showTab(id,el){
 
 // ── APPS DATA ──
 const apps=[
+    // IsaacLab Industry 4.0
+  {name:"EGK AddMath SPM",cat:"Education",icon:"https://github.com/egkhor/stem/blob/main/egkaddmath.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-addmath-spm/id6761680361"},
+  {name:"EGK Semicon AI Copilot",cat:"AI",icon:"https://github.com/egkhor/stem/blob/main/AI%20Copilot.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-semicon-ai-copilot/id6761057177"},
+  {name:"EGK Biology SPM",cat:"Biology",icon:"https://github.com/egkhor/stem/blob/main/biology.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-biology-spm/id6761740088"},
+  {name:"EGK AI StudyMate",cat:"AI",icon:"https://github.com/egkhor/stem/blob/main/egkaistudy.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-ai-studymate/id6759546131"},
+  {name:"EGK BookStore",cat:"Education",icon:"https://github.com/egkhor/stem/blob/main/egkbookstore.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-bookstore/id6758967869"},
+  {name:"EGK KimiaSPM",cat:"Science",icon:"https://github.com/egkhor/stem/blob/main/kimia.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-kimiaspm/id6761703618"},
+  {name:"EGK Physics SPM",cat:"Science",icon:"https://github.com/egkhor/stem/blob/main/physics.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-physics-spm/id6761714096"},
   {name:"EGK STEM Education",cat:"Education",icon:"https://egkhor.com.my/home/wp-content/uploads/2026/01/STEM.jpg",free:true,android:"https://docs.google.com/forms/d/e/1FAIpQLSdJUMCnwaVfWkFEgp7i-Z3vrLnkjY7c-UHvETpvMrdS8shgww/viewform",ios:"https://apps.apple.com/my/app/egk-stem-masterapp/id6755504691"},
   {name:"EGK Anti-Bully Careline",cat:"Safety",icon:"https://egkhor.com.my/home/wp-content/uploads/2026/01/AntibullyMOE.jpg",free:true,android:"https://docs.google.com/forms/d/e/1FAIpQLSfzLbXExUxUqVKPNHBOw_EI5B4wgoa8QdfyCU7s5wXh8VLnXw/viewform",ios:"https://apps.apple.com/my/app/egk-anti-bully-careline/id6751313916"},
   {name:"EGK Character Edu AR",cat:"Education",icon:"https://egkhor.com.my/home/wp-content/uploads/2026/01/Pendidikam-Character.jpg",free:false,android:"https://buy.stripe.com/8x26oGgQ97hb3Iz5QV6Zy0c",ios:"https://apps.apple.com/my/app/egk-characteredu-ar/id6754547233"},
@@ -907,14 +915,6 @@ const apps=[
   {name:"EGK AI-Bot AR",cat:"AI",icon:"https://egkhor.com.my/home/wp-content/uploads/2025/12/Ai-bot.jpg",free:false,android:"https://buy.stripe.com/8x26oGgQ97hb3Iz5QV6Zy0c",ios:"https://apps.apple.com/my/app/egk-ai-bot-ar/id6752312993"},
   {name:"EGK AI AR",cat:"AI",icon:"https://egkhor.com.my/home/wp-content/uploads/2025/12/EGKAI.jpg",free:false,android:"https://buy.stripe.com/8x26oGgQ97hb3Iz5QV6Zy0c",ios:"https://apps.apple.com/my/app/egk-ai-ar/id6755432636"},
   {name:"EGK HSR AR",cat:"Infrastructure",icon:"https://egkhor.com.my/home/wp-content/uploads/2025/12/EGKHSR.jpg",free:false,android:"https://buy.stripe.com/8x26oGgQ97hb3Iz5QV6Zy0c",ios:"https://apps.apple.com/my/app/egk-hsr-ar/id6751638714"},
-  // IsaacLab Industry 4.0
-  {name:"EGK AddMath SPM",cat:"Education",icon:"https://github.com/egkhor/stem/blob/main/egkaddmath.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-addmath-spm/id6761680361"},
-  {name:"EGK Semicon AI Copilot",cat:"AI",icon:"https://github.com/egkhor/stem/blob/main/AI%20Copilot.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-semicon-ai-copilot/id6761057177"},
-  {name:"EGK Biology SPM",cat:"Biology",icon:"https://github.com/egkhor/stem/blob/main/biology.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-biology-spm/id6761740088"},
-  {name:"EGK AI StudyMate",cat:"AI",icon:"https://github.com/egkhor/stem/blob/main/egkaistudy.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-ai-studymate/id6759546131"},
-  {name:"EGK BookStore",cat:"Education",icon:"https://github.com/egkhor/stem/blob/main/egkbookstore.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-bookstore/id6758967869"},
-  {name:"EGK KimiaSPM",cat:"Science",icon:"https://github.com/egkhor/stem/blob/main/kimia.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-kimiaspm/id6761703618"},
-  {name:"EGK Physics SPM",cat:"Science",icon:"https://github.com/egkhor/stem/blob/main/physics.png?raw=true",free:false,ios:"https://apps.apple.com/my/app/egk-physics-spm/id6761714096"},
 ];
 
 function renderApps(filter){
