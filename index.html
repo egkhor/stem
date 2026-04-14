@@ -542,26 +542,84 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
   </div>
 </section>
 
-  <!-- ══ KPM QUOTE ══ -->
+<!-- ══ KPM QUOTE ══ -->
 <section id="prof" style="padding:70px 20px;">
   <div class="container">
     <div class="prof-inner reveal">
       <span class="section-label blue" style="margin-bottom:20px;display:inline-block;">Endorsed by KPM</span>
-      <div class="prof-quote">
-        Kementerian Pendidikan Malaysia, melalui Jawatankuasa Penilai, mencadangkan supaya produk AR sesuai untuk subjek STEM di Sekolah, Namun begitu, kandungan produk EGK perlu selaras dengan kurikulum semasa dan sesuai mengikut keperluan murid.
+      
+      <!-- Protected quote container -->
+      <div class="prof-quote no-copy">
+        Kementerian Pendidikan Malaysia, melalui Jawatankuasa Penilai, mencadangkan supaya produk AR sesuai untuk subjek STEM di Sekolah. Namun begitu, kandungan produk EGK perlu selaras dengan kurikulum semasa dan sesuai mengikut keperluan murid.
         <div class="prof-name">Kementerian Pendidikan Malaysia</div>
       </div>
+
       <div style="margin-top:40px;">
         <iframe
           src="https://egkhor.com.my/home/wp-content/uploads/2026/04/EGK-MICROELECTRONIC-SOLUTION-GROUP-SDN-BHD-2.pdf"
           width="100%"
           height="600px"
-          style="border:1px solid #ddd;border-radius:10px;">
+          style="border:1px solid #ddd;border-radius:10px;"
+          sandbox="allow-scripts">
         </iframe>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+/* Disable text selection */
+.no-copy,
+.no-copy * {
+  -webkit-user-select: none;   /* Safari */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* Standard */
+  -webkit-touch-callout: none; /* iOS */
+}
+
+/* Optional: Make it look normal but still protected */
+.no-copy {
+  position: relative;
+}
+
+/* Optional overlay trick (extra layer of annoyance) */
+.no-copy::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicks through for links if any */
+}
+</style>
+
+<script>
+// Extra JavaScript protection (blocks copy event, right-click on the section)
+document.addEventListener('DOMContentLoaded', function() {
+  const protected = document.querySelectorAll('.no-copy');
+  
+  protected.forEach(el => {
+    // Block copy, cut, context menu
+    el.addEventListener('copy', e => e.preventDefault());
+    el.addEventListener('cut', e => e.preventDefault());
+    el.addEventListener('contextmenu', e => e.preventDefault());
+    
+    // Old-school IE/older browser support
+    el.onselectstart = () => false;
+    el.onmousedown = () => false;
+  });
+
+  // Optional: Show a polite message when they try to copy
+  document.addEventListener('copy', function(e) {
+    if (document.getSelection().toString().length > 10) {  // only if they selected something substantial
+      // You can alert or show a toast: "Content is protected. Please contact us for official use."
+      console.log("Copy attempt blocked - KPM Quote is protected.");
+    }
+  });
+});
+</script>
   
 <!-- ══ ENDORSEMENT ══ -->
 <section id="endorse">
