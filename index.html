@@ -388,55 +388,43 @@ footer{background:#020510;border-top:1px solid var(--border);padding:50px 24px 2
 .mushi-tip-box::after{content:'';position:absolute;bottom:-12px;right:20px;border:6px solid transparent;border-top-color:var(--deep);}
 
 /* KPM Quote */
-  <style>
-/* Disable text selection */
+<style>
+/* Only disable selection on the quote, not the whole section or iframe */
 .no-copy,
 .no-copy * {
-  -webkit-user-select: none;   /* Safari */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* IE/Edge */
-  user-select: none;           /* Standard */
-  -webkit-touch-callout: none; /* iOS */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
-/* Optional: Make it look normal but still protected */
 .no-copy {
   position: relative;
-}
-
-/* Optional overlay trick (extra layer of annoyance) */
-.no-copy::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Allows clicks through for links if any */
+  cursor: default;
 }
 </style>
 
 <script>
-// Extra JavaScript protection (blocks copy event, right-click on the section)
+// Protection only for the quote (does NOT affect the PDF iframe)
 document.addEventListener('DOMContentLoaded', function() {
-  const protected = document.querySelectorAll('.no-copy');
+  const quote = document.querySelector('.no-copy');
   
-  protected.forEach(el => {
-    // Block copy, cut, context menu
-    el.addEventListener('copy', e => e.preventDefault());
-    el.addEventListener('cut', e => e.preventDefault());
-    el.addEventListener('contextmenu', e => e.preventDefault());
+  if (quote) {
+    quote.addEventListener('copy', e => e.preventDefault());
+    quote.addEventListener('cut', e => e.preventDefault());
+    quote.addEventListener('contextmenu', e => e.preventDefault());
     
-    // Old-school IE/older browser support
-    el.onselectstart = () => false;
-    el.onmousedown = () => false;
-  });
+    // Extra old-browser protection
+    quote.onselectstart = () => false;
+  }
 
-  // Optional: Show a polite message when they try to copy
+  // Optional: Show a message if someone tries to copy from the protected quote
   document.addEventListener('copy', function(e) {
-    if (document.getSelection().toString().length > 10) {  // only if they selected something substantial
-      // You can alert or show a toast: "Content is protected. Please contact us for official use."
-      console.log("Copy attempt blocked - KPM Quote is protected.");
+    const selectedText = document.getSelection ? document.getSelection().toString() : '';
+    if (selectedText.length > 5) {
+      console.log("%cCopy attempt on protected KPM quote was blocked.", "color: #0066cc; font-weight: bold;");
+      // You can add a small toast here if you want to notify the user
     }
   });
 });
@@ -603,19 +591,21 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="prof-inner reveal">
       <span class="section-label blue" style="margin-bottom:20px;display:inline-block;">Endorsed by KPM</span>
       
-      <!-- Protected quote container -->
+      <!-- Protected Quote - only this part is non-copyable -->
       <div class="prof-quote no-copy">
         Kementerian Pendidikan Malaysia, melalui Jawatankuasa Penilai, mencadangkan supaya produk AR sesuai untuk subjek STEM di Sekolah. Namun begitu, kandungan produk EGK perlu selaras dengan kurikulum semasa dan sesuai mengikut keperluan murid.
         <div class="prof-name">Kementerian Pendidikan Malaysia</div>
       </div>
 
-      <div style="margin-top:40px;">
+      <!-- PDF remains fully interactive and visible -->
+      <div style="margin-top:40px; position: relative;">
         <iframe
+          id="kpm-pdf"
           src="https://egkhor.com.my/home/wp-content/uploads/2026/04/EGK-MICROELECTRONIC-SOLUTION-GROUP-SDN-BHD-2.pdf"
           width="100%"
           height="600px"
           style="border:1px solid #ddd;border-radius:10px;"
-          sandbox="allow-scripts">
+          sandbox="allow-scripts allow-same-origin">
         </iframe>
       </div>
     </div>
