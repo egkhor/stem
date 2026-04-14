@@ -234,7 +234,9 @@ section{position:relative;z-index:1;padding:80px 24px;}
 .book-cover{height:clamp(160px,22vw,220px);border-radius:12px;box-shadow:0 10px 32px rgba(0,0,0,.5);transition:transform .3s;object-fit:cover;}
 .book-card:hover .book-cover:first-child{transform:rotate(-3deg) scale(1.04);}
 .book-card:hover .book-cover:last-child{transform:rotate(3deg) scale(1.04);}
-
+.book-card::before{
+pointer-events:none; /* 🔥 allow clicks to pass through */
+}
 .book-info{padding:22px;}
 .book-lang{display:inline-block;font-size:.7rem;font-weight:800;padding:2px 11px;border-radius:50px;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;}
 .bl-en{background:rgba(0,194,255,.15);color:var(--cyan);border:1px solid rgba(0,194,255,.3);}
